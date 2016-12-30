@@ -50,6 +50,23 @@ github.com/naoina/denco to github.com/go-openapi/runtime/middleware/denco
 github.com/go-swagger/go-swagger to github.com/go-openapi
 ```
 
+## GIT pull
+go get github.com/ivorubic/go-swagger
+rename folder ivorubic to go-swagger in go/src/github.com
+
+## Edit templates
+open folder in terminal --> ./generator
+install go package: -->  go get -u github.com/jteeuwen/go-bindata/...
+change relevant templates
+run cmd: --> go install github.com/go-swagger/go-swagger/cmd/swagger
+run cmd: --> go-bindata -pkg=generator ./templates/...
+
+## Local install
+go install github.com/go-swagger/go-swagger/cmd/swagger
+
+## Run local installation
+$GOPATH/bin/swagger generate server [-f ./swagger.json] -A [application-name [--principal [principal-name]]
+
 ## Docs
 
 <https://goswagger.io>

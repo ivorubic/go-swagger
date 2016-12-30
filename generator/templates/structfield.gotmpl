@@ -7,8 +7,8 @@
 {{- if $.HasBaseType -}}
   -
 {{- else }}
-  {{- .Name }}
-  {{- if not .Required }}{{ if not .IsArray }},omitempty{{ end }}{{ end }}
+  {{- if .Title }}{{ .Title }}{{ else }}{{- .Name }}
+  {{- if not .Required }}{{ if not .IsArray }},omitempty{{ end }}{{ end }}{{ end }}
 {{- end }}"
 {{- if .XMLName }} xml:"{{ .XMLName }}"{{ end }}`
 {{ end }}
